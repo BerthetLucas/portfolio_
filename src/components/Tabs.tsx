@@ -24,21 +24,11 @@ export const TabsToggle = () => {
   return (
     <Tabs
       defaultValue="projects"
-      className="flex w-full items-center justify-center"
+      className="flex w-full flex-col items-center justify-center"
     >
-      <TabsList className="flex gap-1 rounded-lg bg-amber-300 py-7">
-        <TabsTrigger
-          value="projects"
-          className="p-6 text-lg font-bold focus:bg-white"
-        >
-          Projets
-        </TabsTrigger>
-        <TabsTrigger
-          value="contact"
-          className="p-6 text-lg font-bold focus:bg-white active:bg-white"
-        >
-          Contact
-        </TabsTrigger>
+      <TabsList>
+        <TabsTrigger value="projects">Projets</TabsTrigger>
+        <TabsTrigger value="contact">Contact</TabsTrigger>
       </TabsList>
       <TabsContent value="projects" className="w-3/4">
         <div className="flex flex-col items-center gap-10 md:flex-row md:flex-wrap md:justify-center">
