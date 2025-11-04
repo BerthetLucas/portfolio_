@@ -13,7 +13,11 @@ interface ProjectCardProps {
   technologies: string[];
 }
 
-export const ProjectCard = ({ title, description, technologies }: ProjectCardProps) => {
+export const ProjectCard = ({
+  title,
+  description,
+  technologies,
+}: ProjectCardProps) => {
   const { isMobile } = useIsMobile();
 
   return (
@@ -26,11 +30,11 @@ export const ProjectCard = ({ title, description, technologies }: ProjectCardPro
         <ProjectCardFooter technologies={technologies} />
       </div>
       {!isMobile && (
-        <div className="max-w-1/2">
+        <div className="max-w-1/2 h-full overflow-hidden rounded-r-[0.6875rem]">
           <img
-            src="https://placehold.co/800x600"
+            src="https://images.pexels.com/photos/33771131/pexels-photo-33771131.jpeg"
             alt="Project Image"
-            className="rounded-r-2xl object-cover"
+            className="h-full w-full object-cover"
           />
         </div>
       )}

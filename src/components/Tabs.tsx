@@ -1,5 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ProjectCard } from '@/components/ProjectCard/ProjectCard.tsx';
+import { ContactForm } from './Contact/ContactForm';
 
 export const TabsToggle = () => {
   const projects = [
@@ -42,7 +43,12 @@ export const TabsToggle = () => {
           ))}
         </div>
       </TabsContent>
-      <TabsContent value="contact">Change your password here.</TabsContent>
+      <TabsContent
+        value="contact"
+        className="flex flex-col items-center justify-center w-3/4"
+      >
+        <ContactForm />
+      </TabsContent>
     </Tabs>
   );
 };
