@@ -1,5 +1,5 @@
 import { CogIcon } from 'lucide-react';
-import { CardFooter } from '../ui/card';
+import { CardFooter } from '@/components/ui/card';
 
 interface ProjectCardFooterProps {
   technologies: string[];
@@ -14,7 +14,7 @@ export const ProjectCardFooter = ({ technologies }: ProjectCardFooterProps) => {
           key={technology}
           src={technology}
           alt="Project Image"
-          className="h-6 w-6"
+          className="h-5 w-auto"
         />
       ))}
     </CardFooter>

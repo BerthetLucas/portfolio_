@@ -1,0 +1,13 @@
+{
+  "projects": [
+    {
+      "title": "La Bonne Graine",
+      "description": "Site web de la Bonne Graine, plateforme d'échange entre particuliers. ",
+      "image": "https://images.pexels.com/photos/33771131/pexels-photo-33771131.jpeg",
+      "technologies": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Symfony_logo.svg/2560px-Symfony_logo.svg.png"
+      ]
+    }
+  ]
+}
