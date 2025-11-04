@@ -11,18 +11,20 @@ interface ProjectCardProps {
   title: string;
   description: string;
   technologies: string[];
+  image: string;
 }
 
 export const ProjectCard = ({
   title,
   description,
   technologies,
+  image,
 }: ProjectCardProps) => {
   const { isMobile } = useIsMobile();
 
   return (
     <Card className="w-full max-w-3xl transition-shadow duration-300 hover:shadow-lg md:flex md:flex-row">
-      <div className="flex flex-1 flex-col justify-between">
+      <div className="flex flex-1 flex-col justify-between gap-2">
         <CardHeader className="pt-6">
           <CardTitle className="text-xl font-bold">{title}</CardTitle>
           <CardDescription className="text-sm">{description}</CardDescription>
@@ -32,7 +34,7 @@ export const ProjectCard = ({
       {!isMobile && (
         <div className="max-w-1/2 h-full overflow-hidden rounded-r-[0.6875rem]">
           <img
-            src="https://images.pexels.com/photos/33771131/pexels-photo-33771131.jpeg"
+            src={image}
             alt="Project Image"
             className="h-full w-full object-cover"
           />

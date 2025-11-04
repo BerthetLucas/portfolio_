@@ -14,6 +14,7 @@ export const ProjectContainer = () => {
           title={project.title}
           description={project.description}
           technologies={project.technologies}
+          image={project.image}
         />
       ))}
     </MotionDiv>
