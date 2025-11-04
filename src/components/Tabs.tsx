@@ -6,7 +6,8 @@ export const TabsToggle = () => {
   return (
     <Tabs
       defaultValue="projects"
-      className="flex w-full flex-col items-center justify-center"
+      className="flex w-full flex-col items-center justify-center min-h-screen scroll-mt-20"
+      id="tabs-toggle"
     >
       <TabsList>
         <TabsTrigger value="projects">Projets</TabsTrigger>

@@ -1,10 +1,10 @@
-import { MotionDiv } from '../MotionComponents/MotionDiv';
+import { MotionSection } from '../MotionComponents/MotionSection';
 import { ProjectCard } from './ProjectCard/ProjectCard';
 import projects from '@/data/projects.json';
 
 export const ProjectContainer = () => {
   return (
-    <MotionDiv
+    <MotionSection
       delay={0.2}
       className="flex flex-col items-center gap-10 md:flex-row md:flex-wrap md:justify-center mt-10"
     >
@@ -17,6 +17,6 @@ export const ProjectContainer = () => {
           image={project.image}
         />
       ))}
-    </MotionDiv>
+    </MotionSection>
   );
 };
