@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from './components/ui/avatar';
 
 function App() {
   return (
-    <main className="mt-10 flex min-h-screen w-full flex-col items-center justify-center gap-8 md:gap-20">
+    <main className="mt-10 flex min-h-screen w-full flex-col items-center justify-center gap-8 md:gap-20 bg-background">
       <TypographyH1>Lucas Berthet</TypographyH1>
       <TypographyH1>Développeur Web</TypographyH1>
       <Avatar className="md:size-32 size-18">
