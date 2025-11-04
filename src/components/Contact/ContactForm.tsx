@@ -17,7 +17,7 @@ export const ContactForm = () => {
   return (
     <>
       <form
-        className="flex flex-col items-center justify-center w-full gap-2"
+        className="flex flex-col items-center justify-center w-full gap-2 md:w-3/4 mt-10 md:gap-8"
         onSubmit={handleSubmit}
       >
         <EmailInput />
