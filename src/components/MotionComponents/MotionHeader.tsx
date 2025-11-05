@@ -1,15 +1,19 @@
 import { motion } from 'motion/react';
 import type { ReactNode } from 'react';
 
-type MotionDivProps = {
+type MotionHeaderProps = {
   children: ReactNode;
   className?: string;
   delay?: number;
 };
 
-export const MotionDiv = ({ children, className, delay }: MotionDivProps) => {
+export const MotionHeader = ({
+  children,
+  className,
+  delay,
+}: MotionHeaderProps) => {
   return (
-    <motion.div
+    <motion.header
       className={className}
       initial={{ opacity: 0 }}
       transition={{ duration: 1, delay: delay ?? 0 }}
@@ -17,6 +21,6 @@ export const MotionDiv = ({ children, className, delay }: MotionDivProps) => {
       whileInView={{ opacity: 1 }}
     >
       {children}
-    </motion.div>
+    </motion.header>
   );
 };

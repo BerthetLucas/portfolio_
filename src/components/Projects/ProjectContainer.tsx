@@ -15,6 +15,7 @@ export const ProjectContainer = () => {
           description={project.description}
           technologies={project.technologies}
           image={project.image}
+          url={project.url}
         />
       ))}
     </MotionSection>

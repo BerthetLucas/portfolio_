@@ -4,14 +4,16 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { useIsMobile } from '@/hooks/use-is-mobile';
 import { ProjectCardFooter } from './ProjectCardFooter';
+import useIsMobile from '@/hooks/use-is-mobile';
+import { useNavigate } from 'react-router';
 
 interface ProjectCardProps {
   title: string;
   description: string;
   technologies: string[];
   image: string;
+  url: string;
 }
 
 export const ProjectCard = ({
@@ -19,11 +21,20 @@ export const ProjectCard = ({
   description,
   technologies,
   image,
+  url,
 }: ProjectCardProps) => {
   const { isMobile } = useIsMobile();
+  const navigate = useNavigate();
+
+  const handleNavigationClick = () => {
+    navigate(url);
+  };
 
   return (
-    <Card className="w-full max-w-3xl transition-shadow duration-300 hover:shadow-lg md:flex md:flex-row">
+    <Card
+      className="w-full max-w-3xl transition-all duration-300 hover:shadow-lg md:flex md:flex-row hover:grayscale-0 hover:scale-102"
+      onClick={handleNavigationClick}
+    >
       <div className="flex flex-1 flex-col justify-between gap-2">
         <CardHeader className="pt-6">
           <CardTitle className="text-xl font-bold">{title}</CardTitle>

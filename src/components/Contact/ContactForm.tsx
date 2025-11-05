@@ -2,6 +2,7 @@ import { EmailInput } from './EmailInput';
 import { MessageInput } from './MessageInput';
 import { Button } from '../ui/button';
 import { toast, Toaster } from 'sonner';
+import { ContactText } from './ContactText';
 
 export const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -16,6 +17,7 @@ export const ContactForm = () => {
 
   return (
     <>
+      <ContactText />
       <form
         className="flex flex-col items-center justify-center w-full gap-2 md:w-3/4 mt-10 md:gap-8"
         onSubmit={handleSubmit}

@@ -5,7 +5,7 @@ import { MotionSection } from './components/MotionComponents/MotionSection';
 function App() {
   return (
     <Layout>
-      <MotionSection delay={0.2}>
+      <MotionSection delay={0.5}>
         <TabsToggle />
       </MotionSection>
     </Layout>

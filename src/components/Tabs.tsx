@@ -1,6 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { ContactForm } from './Contact/ContactForm';
 import { ProjectContainer } from './Projects/ProjectContainer';
+import { MotionSection } from './MotionComponents/MotionSection';
 
 export const TabsToggle = () => {
   return (
@@ -10,17 +11,23 @@ export const TabsToggle = () => {
       id="tabs-toggle"
     >
       <TabsList>
-        <TabsTrigger value="projects">Projets</TabsTrigger>
-        <TabsTrigger value="contact">Contact</TabsTrigger>
+        <TabsTrigger value="projects" className="text-xl">
+          Projets
+        </TabsTrigger>
+        <TabsTrigger value="contact" className="text-xl">
+          Contact
+        </TabsTrigger>
       </TabsList>
       <TabsContent value="projects" className="w-3/4">
         <ProjectContainer />
       </TabsContent>
-      <TabsContent
-        value="contact"
-        className="flex flex-col items-center justify-center w-3/4"
-      >
-        <ContactForm />
+      <TabsContent value="contact" className="flex flex-col w-3/4">
+        <MotionSection
+          delay={0.2}
+          className="w-full flex flex-col items-center"
+        >
+          <ContactForm />
+        </MotionSection>
       </TabsContent>
     </Tabs>
   );

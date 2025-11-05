@@ -7,7 +7,8 @@
       "technologies": [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Symfony_logo.svg/2560px-Symfony_logo.svg.png"
-      ]
+      ],
+      "url": "/la-bonne-graine"
     },
     {
       "title": "QuestHub",
@@ -15,7 +16,8 @@
       "image": "/questHub.png",
       "technologies": [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8i4zPog-0j0JR_yZglxPhTPZXxN2iMTQ3Dw&s"
-      ]
+      ],
+      "url": "/questhub"
     },
     {
       "title": "Sharing Link Transformer",
@@ -25,7 +27,8 @@
         "https://img.icons8.com/?size=1200&id=yUdJlcKanVbh&format=jpg",
         "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/2/playwright-y50bnthygb3rvsppvkm9e.png/playwright-q55xzpenhgjsodksybst.png?_a=DATAg1AAZAA0",
         "https://testing-library.com/img/octopus-128x128.png"
-      ]
+      ],
+      "url": "/sharing-link-transformer"
     }
   ]
 }
