@@ -1,34 +1,46 @@
 {
   "projects": [
     {
+      "id": "1",
       "title": "La Bonne Graine",
-      "description": "Site web de la Bonne Graine, plateforme d'échange entre particuliers. ",
+      "description": "Site web de la Bonne Graine, plateforme d'échange entre particuliers.",
+      "skills": ["Authentification", "Ajax", "Base de données"],
       "image": "/laBonneGraine.png",
       "technologies": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Symfony_logo.svg/2560px-Symfony_logo.svg.png"
+        "https://img.icons8.com/?size=100&id=UGYn5TapNioV&format=png&color=000000",
+        "https://img.icons8.com/?size=100&id=78295&format=png&color=000000"
       ],
-      "url": "/la-bonne-graine"
+      "url": "https://projet.lucasberthet.com/register"
     },
     {
+      "id": "2",
       "title": "QuestHub",
       "description": "API pour une plateforme de création de jeux de rôle en ligne.",
       "image": "/questHub.png",
       "technologies": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8i4zPog-0j0JR_yZglxPhTPZXxN2iMTQ3Dw&s"
+        "https://img.icons8.com/?size=100&id=90519&format=png&color=000000",
+        "https://img.icons8.com/?size=100&id=22813&format=png&color=000000"
       ],
-      "url": "/questhub"
+      "url": "https://jdr-cli.vercel.app/home",
+      "skills": [
+        "Conception",
+        "Gestion de projet",
+        "Conteneurisation",
+        "Architecture"
+      ]
     },
     {
+      "id": "3",
       "title": "Sharing Link Transformer",
       "description": "Convertisseur de liens de partage entre Spotify et Deezer.",
       "image": "/sharing-link-transformer.png",
       "technologies": [
-        "https://img.icons8.com/?size=1200&id=yUdJlcKanVbh&format=jpg",
+        "https://img.icons8.com/?size=100&id=r2OarXWQc7B6&format=png&color=000000",
         "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/2/playwright-y50bnthygb3rvsppvkm9e.png/playwright-q55xzpenhgjsodksybst.png?_a=DATAg1AAZAA0",
         "https://testing-library.com/img/octopus-128x128.png"
       ],
-      "url": "/sharing-link-transformer"
+      "url": "https://sharing-links-transformer.vercel.app/",
+      "skills": ["CI/CD", "Test end to end", "TanStack Query", "Gestion d'état"]
     }
   ]
 }

@@ -4,8 +4,12 @@ import './index.css';
 import App from './App.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { ThemeProvider } from './components/ThemeProvider';
+import { ProjectDetails } from './components/ProjectDetails/ProjectDetails';
 
-const router = createBrowserRouter([{ path: '/', element: <App /> }]);
+const router = createBrowserRouter([
+  { path: '/', element: <App /> },
+  { path: '/projects/:projectId', element: <ProjectDetails /> },
+]);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

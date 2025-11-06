@@ -10,12 +10,12 @@ export const ProjectContainer = () => {
     >
       {projects.projects.map(project => (
         <ProjectCard
-          key={project.title}
+          key={project.id}
+          projectId={project.id}
           title={project.title}
           description={project.description}
           technologies={project.technologies}
           image={project.image}
-          url={project.url}
         />
       ))}
     </MotionSection>

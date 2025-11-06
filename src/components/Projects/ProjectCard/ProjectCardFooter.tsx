@@ -7,14 +7,14 @@ interface ProjectCardFooterProps {
 
 export const ProjectCardFooter = ({ technologies }: ProjectCardFooterProps) => {
   return (
-    <CardFooter className="flex items-center gap-2 pb-6">
-      <CogIcon className="h-6 w-6" />
+    <CardFooter className="flex items-center gap-2 my-2">
+      <CogIcon className="h-8 w-auto" />
       {technologies.map(technology => (
         <img
           key={technology}
           src={technology}
           alt="Project Image"
-          className="h-5 w-auto"
+          className="h-9 w-auto"
         />
       ))}
     </CardFooter>

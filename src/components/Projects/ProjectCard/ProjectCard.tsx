@@ -9,25 +9,25 @@ import useIsMobile from '@/hooks/use-is-mobile';
 import { useNavigate } from 'react-router';
 
 interface ProjectCardProps {
+  projectId: string;
   title: string;
   description: string;
   technologies: string[];
   image: string;
-  url: string;
 }
 
 export const ProjectCard = ({
+  projectId,
   title,
   description,
   technologies,
   image,
-  url,
 }: ProjectCardProps) => {
   const { isMobile } = useIsMobile();
   const navigate = useNavigate();
 
   const handleNavigationClick = () => {
-    navigate(url);
+    navigate(`/projects/${projectId}`);
   };
 
   return (
