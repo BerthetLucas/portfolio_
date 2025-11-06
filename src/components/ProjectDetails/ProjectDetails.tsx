@@ -7,6 +7,7 @@ import { SkillsCard } from './SkillsCard';
 import { MotionMain } from '../MotionComponents/MotionMain';
 import { Footer } from '../Layout/Footer';
 import { ArrowLeftIcon } from '../Icon/ArrowLeftIcon';
+import { ScrollRestoration } from 'react-router';
 
 export const ProjectDetails = () => {
   const { projectId } = useParams();
@@ -14,6 +15,7 @@ export const ProjectDetails = () => {
 
   return (
     <>
+      <ScrollRestoration />
       <MotionMain
         delay={0.1}
         className="flex flex-col items-center justify-around min-h-screen mx-5 gap-10"
@@ -39,7 +41,12 @@ export const ProjectDetails = () => {
             target="_blank"
             className="hover:grayscale-100 transition-all duration-300 inline-block"
           >
-            <img src={project?.image} alt="" />
+            <img
+              src={project?.image}
+              alt=""
+              loading="eager"
+              fetchPriority="high"
+            />
           </Link>
         </div>
 
