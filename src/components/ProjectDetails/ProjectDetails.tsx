@@ -46,6 +46,7 @@ export const ProjectDetails = () => {
               alt=""
               loading="eager"
               fetchPriority="high"
+              className="rounded-lg"
             />
           </Link>
         </div>
