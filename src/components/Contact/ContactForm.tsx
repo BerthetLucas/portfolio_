@@ -4,12 +4,15 @@ import { Button } from '../ui/button';
 import { toast, Toaster } from 'sonner';
 import { ContactText } from './ContactText';
 import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '../config/env';
 import { handleFormErrors } from './_utils/handle-form-errors';
+import { Spinner } from '../ui/spinner';
 
 export const ContactForm = () => {
   const form = useRef<HTMLFormElement>(null);
+
+  const [isEmailSending, setIsEmailSending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,6 +22,7 @@ export const ContactForm = () => {
     const message = formData.get('message') as string;
 
     if (!form.current) return;
+    setIsEmailSending(true);
 
     handleFormErrors({ email, message });
 
@@ -27,6 +31,7 @@ export const ContactForm = () => {
         publicKey: PUBLIC_KEY,
       });
       toast.success('Message envoyé avec succès');
+      setIsEmailSending(false);
       form.current.reset();
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
@@ -44,7 +49,10 @@ export const ContactForm = () => {
       >
         <EmailInput />
         <MessageInput />
-        <Button type="submit">Envoyer</Button>
+        <Button type="submit" disabled={isEmailSending}>
+          {isEmailSending && <Spinner />}
+          Envoyer
+        </Button>
       </form>
       <Toaster richColors closeButton position="top-center" />
     </>
