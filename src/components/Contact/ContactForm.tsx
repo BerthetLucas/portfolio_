@@ -6,7 +6,6 @@ import { ContactText } from './ContactText';
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '../config/env';
-import { handleFormErrors } from './_utils/handle-form-errors';
 import { Spinner } from '../ui/spinner';
 
 export const ContactForm = () => {
@@ -21,10 +20,18 @@ export const ContactForm = () => {
     const email = formData.get('email') as string;
     const message = formData.get('message') as string;
 
+    if (!email || !message) {
+      toast.error('Veuillez remplir tous les champs');
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      toast.error('Veuillez entrer une adresse email valide');
+      return;
+    }
+
     if (!form.current) return;
     setIsEmailSending(true);
-
-    handleFormErrors({ email, message });
 
     try {
       await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
