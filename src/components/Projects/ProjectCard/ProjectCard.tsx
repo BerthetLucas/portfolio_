@@ -43,11 +43,11 @@ export const ProjectCard = ({
         <ProjectCardFooter technologies={technologies} />
       </div>
       {!isMobile && (
-        <div className="max-w-1/2 h-full overflow-hidden rounded-r-[0.6875rem]">
+        <div className="w-full md:w-1/2 md:min-w-[280px] relative aspect-video md:aspect-auto">
           <img
             src={image}
             alt="Project Image"
-            className="h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
       )}
