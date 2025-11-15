@@ -6,20 +6,11 @@ import { TechItems } from './TechItems';
 import { SkillsCard } from './SkillsCard';
 import { MotionMain } from '../MotionComponents/MotionMain';
 import { Footer } from '../Layout/Footer';
-import { ArrowLeftIcon } from '../Icon/ArrowLeftIcon';
 import { ScrollRestoration } from 'react-router';
-import { Button } from '../ui/button';
-import { useNavigate } from 'react-router';
 
 export const ProjectDetails = () => {
   const { projectId } = useParams();
   const project = projects.projects[Number(projectId) - 1];
-
-  const navigate = useNavigate();
-
-  const handleBackClick = () => {
-    navigate(-1);
-  };
 
   return (
     <>
@@ -30,9 +21,7 @@ export const ProjectDetails = () => {
       >
         <div className="flex flex-col items-center justify-center gap-5 w-full">
           <div className="relative w-full flex items-center">
-            <Button variant="ghost" onClick={handleBackClick}>
-              <ArrowLeftIcon className="size-10" />
-            </Button>
+            <BackButton />
             <div className="flex-1 flex justify-center">
               <TypographyH1>{project?.title}</TypographyH1>
             </div>
@@ -55,13 +44,12 @@ export const ProjectDetails = () => {
             />
           </Link>
         </div>
-
         <div className="flex flex-wrap gap-4 items-center justify-center">
           {project?.skills.map(skill => (
             <SkillsCard key={skill} skill={skill} />
           ))}
         </div>
-        <BackButton />
+        <BackButton showOnMobile />
       </MotionMain>
       <Footer />
     </>

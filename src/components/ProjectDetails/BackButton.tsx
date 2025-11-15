@@ -2,18 +2,35 @@ import { Button } from '../ui/button';
 import { ArrowLeftIcon } from '../Icon/ArrowLeftIcon';
 import { useNavigate } from 'react-router';
 
-export const BackButton = () => {
+interface BackButtonProps {
+  showOnMobile?: boolean;
+}
+
+export const BackButton = ({ showOnMobile }: BackButtonProps) => {
   const navigate = useNavigate();
 
   const handleBackClick = () => {
     navigate(-1);
   };
+
+  if (showOnMobile) {
+    return (
+      <Button
+        variant="outline"
+        size="xl"
+        className="rounded-full h-24 w-24 md:hidden"
+        onClick={handleBackClick}
+      >
+        <ArrowLeftIcon className="size-10" />
+      </Button>
+    );
+  }
+
   return (
     <Button
-      variant="outline"
-      size="xl"
-      className="rounded-full h-24 w-24 md:hidden"
+      variant="ghost"
       onClick={handleBackClick}
+      className="hidden md:block"
     >
       <ArrowLeftIcon className="size-10" />
     </Button>
