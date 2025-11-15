@@ -8,10 +8,18 @@ import { MotionMain } from '../MotionComponents/MotionMain';
 import { Footer } from '../Layout/Footer';
 import { ArrowLeftIcon } from '../Icon/ArrowLeftIcon';
 import { ScrollRestoration } from 'react-router';
+import { Button } from '../ui/button';
+import { useNavigate } from 'react-router';
 
 export const ProjectDetails = () => {
   const { projectId } = useParams();
   const project = projects.projects[Number(projectId) - 1];
+
+  const navigate = useNavigate();
+
+  const handleBackClick = () => {
+    navigate(-1);
+  };
 
   return (
     <>
@@ -22,12 +30,9 @@ export const ProjectDetails = () => {
       >
         <div className="flex flex-col items-center justify-center gap-5 w-full">
           <div className="relative w-full flex items-center">
-            <Link
-              to="/#tabs-toggle"
-              className="hidden md:block absolute left-0"
-            >
+            <Button variant="ghost" onClick={handleBackClick}>
               <ArrowLeftIcon className="size-10" />
-            </Link>
+            </Button>
             <div className="flex-1 flex justify-center">
               <TypographyH1>{project?.title}</TypographyH1>
             </div>

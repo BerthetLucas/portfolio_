@@ -7,7 +7,7 @@ import { BackgroundVideo } from '../BackgroundVideo';
 export const Header = () => {
   return (
     <MotionHeader
-      delay={0.7}
+      delay={0.2}
       className="flex flex-col items-center justify-center h-screen mb-10 md:gap-20 gap-16 "
     >
       <div className="flex flex-col items-center justify-center gap-5">

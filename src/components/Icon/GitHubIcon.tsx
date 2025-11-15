@@ -1,7 +1,7 @@
 export const GitHubIcon = () => {
   return (
     <a
-      href="https://github.com/lucasberthet"
+      href="https://github.com/BerthetLucas"
       target="_blank"
       rel="noopener noreferrer"
     >

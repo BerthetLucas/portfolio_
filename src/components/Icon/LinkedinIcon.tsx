@@ -1,7 +1,7 @@
 export const LinkedinIcon = () => {
   return (
     <a
-      href="https://www.linkedin.com/in/lucas-berthet-4b1b4b252/"
+      href="https://www.linkedin.com/in/lucas-berthet-976657101/"
       target="_blank"
       rel="noopener noreferrer"
     >

@@ -23,7 +23,7 @@ export const TabsToggle = () => {
       </TabsContent>
       <TabsContent value="contact" className="flex flex-col w-3/4">
         <MotionSection
-          delay={0.2}
+          delay={0.1}
           className="w-full flex flex-col items-center"
         >
           <ContactForm />
